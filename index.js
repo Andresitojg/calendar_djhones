@@ -1,18 +1,15 @@
 
-const express = require ('express')
+// server.js
+const express = require('express');
 const app = express();
+const port = 3000;
 
-app.get('/',(req,res) =>{
-    res.send('Hello world');
+// Definir una ruta de ejemplo
+app.get('/', (req, res) => {
+  res.send('¡Hola, mundo!');
 });
 
-app.get('/about',(req,res) =>{
-    res.send('about');
-});
-app.get('/test',(req,res) =>{
-    res.send('Test');
-});
-
-app.listen(5000,() =>{
-    console.log('Server on port 5000');
+// Escuchar en el puerto especificado
+app.listen(port, () => {
+  console.log(`Server 3000 activated`);
 });
