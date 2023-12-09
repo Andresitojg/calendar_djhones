@@ -16,4 +16,3 @@ app.get('/test',(req,res) =>{
 app.listen(5000,() =>{
     console.log('Server on port 5000');
 });
-//*prueba de grid*//
