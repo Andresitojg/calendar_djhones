@@ -1,7 +1,7 @@
 {
 "name": "calendar_djhones",
   "version": "1.0.0",
-  "description": "",
+  "description": "Calendar-djhones",
   "main": "index.js",
   "type": "module",
 
@@ -111,7 +111,7 @@
     "dev": "nodemon index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "David Guerrero",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.0.2"
