@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Sans:wght@100&family=La+Belle+Aurore&display=swap" rel="stylesheet">
   <title>Página Estética</title>
   <style>
     body {
@@ -12,9 +15,10 @@
       align-items: center;
       justify-content: center;
       height: 100vh;
-      background-color: #f0f0f0;
-      font-family: 'Arial', sans-serif;
-      color: #333;
+      background-color: #eea2d2;
+      
+      
+      color: #ffffff;
     }
 
     .container {
@@ -22,19 +26,34 @@
     }
 
     h1 {
-      font-size: 3em;
+      font-size: 4vw;
       margin-bottom: 20px;
+      font-family: 'Fira Sans', sans-serif;
     }
 
     p {
-      font-size: 1.2em;
+      font-size: 3vw;
       margin-bottom: 30px;
+      font-family: 'La Belle Aurore', cursive;
     }
 
     .animation {
       animation: fadeIn 3s ease-in-out;
     }
+    img {
+      max-width: 50%;
+    }
+    .barra-carga {
+    width: 0;
+    height: 20px;
+    background-color: #1573ee; /* Color de fondo de la barra de carga */
+    animation: llenar 10s linear; /* Duración y estilo de la animación */
+}
 
+@keyframes llenar {
+    0% { width: 0; } /* Ancho inicial de la barra de carga */
+    100% { width: 100%; } /* Ancho final de la barra de carga */
+}
     @keyframes fadeIn {
       0% {
         opacity: 0;
@@ -52,16 +71,21 @@
     <img src="https://www.clinicadianadussan.com/wp-content/uploads/2023/09/LOGO_DIANADUSSAN_NEGATIVO.png">
     <h1>Bienvenido</h1>
     <p>Mas que un procedimiento una experiencia de vida</p>
-  </div>
+    <div class="barra-carga"></div>
+    </div>
+    
+
 </div>
 
+
 <script>
+ /*
   setTimeout(function(){
     window.location.href = 'https://www.clinicadianadussan.com/aplicacionvaloraciontt/';
   }, 10000); // Redirige a otra_pagina.html después de 10 segundos
-  
+ 
 
-
+*/
 </script>
 
 </body>
