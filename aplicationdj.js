@@ -51,7 +51,7 @@ $(function(){
     
         
         $("#step3").hide()
-       $("#step4").show()
+       $("#step6").show()
     
     
     })
@@ -67,15 +67,15 @@ $(function(){
     
         
         $("#step4").hide()
-       $("#step5").show()
+       $("#stepplatinum").show()
     
     
     })
     $("#btn3-step4").click(function(){
     
         
-        $("#step2").hide()
-       $("#step4A").show()
+        $("#step4").hide()
+       $("#stepplatinum").show()
     
     
     })
