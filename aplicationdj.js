@@ -79,5 +79,29 @@ $(function(){
     
     
     })
+    $("#btn1-step6").click(function(){
+    
+        
+        $("#step6").hide()
+       $("#step7").show()
+    
+    
+    })
+    $("#btn1-step7").click(function(){
+    
+        
+        $("#step7").hide()
+       $("#step8").show()
+    
+    
+    })
+    $("#btn4-plt").click(function(){
+    
+        
+        $("#stepplatinum").hide()
+       $("#step6").show()
+    
+    
+    })
         
 })
