@@ -5,83 +5,376 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Título de la página</title>
     <style>
-        /* Estilos CSS van aquí */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            background-color: #444;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            padding: 5px 10px;
-        }
-        nav ul li a:hover {
-            background-color: #555;
-        }
-        main {
-            padding: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
+        .red {
+color:rgb(255, 255, 255);
+background-color: black;
+width: max-content;
+}
+.blue {
+    color: rgb(255, 127, 212);
+}
+.btn-hide {
+    padding: 15px 50px;
+  margin:10px 4px;
+  color: #fff;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  display:inline-block;
+  background-color: #6098FF;
+  font-family: 'bebas neue';
+  font-size:xx-large;
+  
+}
+.btn-hide::before {
+  content: '';
+  position: absolute;
+  bottom: 50%;
+  left: 0px;
+  width: 100%;
+  height: 9px;
+  opacity: 0.5;
+  background: #ffffff;
+  display:block;
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transform: scale(0, 1);
+  -ms-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+  transition: transform 0.4s cubic-bezier(1, 0, 0, 1)
+}
+
+.btn-hide:hover::before {
+  -webkit-transform-origin: right top;
+  -ms-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-transform: scale(2, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+.btn-hide1 {
+    padding: 10px 100px;
+  margin:5px 4px;
+  color: #fff;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  display:inline-block;
+  background-color: #6098FF;
+  font-family: 'bebas neue';
+  font-size:xx-large;
+  
+}
+.btn-hide1::before {
+  content: '';
+  position: absolute;
+  bottom: 50%;
+  left: 0px;
+  width: 100%;
+  height: 9px;
+  opacity: 0.5;
+  background: #ffffff;
+  display:block;
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transform: scale(0, 1);
+  -ms-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+  transition: transform 0.4s cubic-bezier(1, 0, 0, 1)
+}
+
+.btn-hide1:hover::before {
+  -webkit-transform-origin: right top;
+  -ms-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-transform: scale(2, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+
+html {
+  height:100%;
+}
+
+body {
+  margin:0;
+}
+
+.bg {
+  animation:slide 9s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #eea2e2 50%, rgb(241, 232, 239) 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:9s;
+}
+
+.bg3 {
+  animation-duration:9s;
+}
+
+.content {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+  
+  
+}
+#step2 {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+  display: none;
+}
+#step3 {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+  display: none;
+}
+#step4 {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+  display: none;
+}
+#step5 {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+  display: none;
+  
+
+}
+  
+  #step6 {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+  display: none;
+}#step7 {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+  display:none;
+
+}#step8 {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+  display: none;
+}
+#step9 {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+  display: none;
+}
+#steporo {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+  display: none;
+}
+#stepplatinum {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+  display: none;
+}
+
+
+.h1 {
+  font-family:monospace;
+}
+.h1lv{
+  font-family: monospace;
+  font-size:x-large;
+}
+.h4lv{
+  font-family: monospace;
+  font-size:larger;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+@media screen and (max-width: 768px) {
+    /* Estilos específicos para pantallas más pequeñas */
+    .btn-hide1 {
+   
+  padding: 0px 100px;
+  margin:5px 4px;
+  font-size:larger;
+}
+.content {
+ font-size:medium;
+  
+  
+}
+.h1lv{
+  font-family: monospace;
+  font-size: small;
+}
+.h4lv{
+  font-family: monospace;
+  font-size: xx-small;
+}
+  }
+/* Reset de estilos para eliminar márgenes y padding por defecto */
+body, h1, h2, p, button {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para el contenedor de botones */
+.botones-container {
+  display: flex;
+  justify-content: space-between; /* Coloca los botones en los extremos del contenedor */
+  width: 100px; /* Puedes ajustar el ancho según tus necesidades */
+  margin: 20px auto; /* Centra el contenedor en la página */
+}
+
+/* Estilos para los botones */
+.remote-btn {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 40px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.remote-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Estilo específico para las flechas */
+.remote-btn::before {
+  content: "←"; /* Carácter de flecha izquierda para retroceder, puedes usar "→" para la flecha derecha */
+  margin-right: 5px; /* Ajusta el espacio entre la flecha y el borde del botón */
+}
     </style>
 </head>
 <body>
-    <header>
-        <h1>Título Principal</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#section1">Sección 1</a></li>
-            <li><a href="#section2">Sección 2</a></li>
-            <li><a href="#section3">Sección 3</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section id="section1">
-            <h2>Sección 1</h2>
-            <p>Contenido de la sección 1...</p>
-        </section>
-        <section id="section2">
-            <h2>Sección 2</h2>
-            <p>Contenido de la sección 2...</p>
-        </section>
-        <section id="section3">
-            <h2>Sección 3</h2>
-            <p>Contenido de la sección 3...</p>
-        </section>
-    </main>
-    <footer>
-        <p>Pie de página &copy; 2024</p>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="content" id="step1">
+          <h4 class="">Bienvenido a Diana Dussan Clínica Avanzada</h4>
+      
+      <button class="btn-hide" id="btn-step1" >Etapa 1
+      </button>
+      <button class="btn-hide" id="btn-step1" >Etapa 2
+    </button>
+    <button class="btn-hide" id="btn-step1" >Etapa 3
+    </button>
+    <button class="btn-hide" id="btn-step1" >Etapa 4
+    </button>
+  
+    </div>
+
+        
     </footer>
 </body>
 </html>
